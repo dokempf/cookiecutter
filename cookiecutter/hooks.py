@@ -122,7 +122,7 @@ def run_hook(hook_name, project_dir, context):
     :param project_dir: The directory to execute the script from.
     :param context: Cookiecutter project context.
     """
-    scripts = find_hook(hook_name, hooks_dir='{{cookiecutter._installer}}')
+    scripts = find_hook(hook_name, hooks_dir='installer')
     if not scripts:
         logger.debug('No %s hook found', hook_name)
         return

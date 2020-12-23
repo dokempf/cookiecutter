@@ -17,11 +17,11 @@ def find_template(repo_dir):
 
     repo_dir_contents = os.listdir(repo_dir)
 
-    project_template = None
-    for item in repo_dir_contents:
-        if 'cookiecutter' in item and '{{' in item and '}}' in item:
-            project_template = item
-            break
+    project_template = "installer"
+    # for item in repo_dir_contents:
+    #     if 'cookiecutter' in item and '{{' in item and '}}' in item:
+    #         project_template = item
+    #         break
 
     if project_template:
         project_template = os.path.join(repo_dir, project_template)
